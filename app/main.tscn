@@ -1,3 +1,103 @@
-[gd_scene format=3 uid="uid://cvaavg5ca7856"]
+[gd_scene load_steps=15 format=3 uid="uid://cvaavg5ca7856"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_yblnd"]
+[ext_resource type="PackedScene" uid="uid://d2xbabe601ih4" path="res://app/player.tscn" id="2_s58fy"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="3_ysqge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s58fy"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ysqge"]
+sky_material = SubResource("ProceduralSkyMaterial_s58fy")
+
+[sub_resource type="Environment" id="Environment_8bux2"]
+background_mode = 2
+sky = SubResource("Sky_ysqge")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ysqge"]
+size = Vector3(1, 1, 0.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8bux2"]
+points = PackedVector3Array(0.5, 0.5, 0.25, 0.5, 0.5, -0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, 0.25, -0.5, -0.5, -0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vw08i"]
+albedo_color = Color(0.172549, 1, 1, 1)
+metallic = 0.66
+metallic_specular = 0.7
+
+[sub_resource type="BoxMesh" id="BoxMesh_tnehs"]
+material = SubResource("StandardMaterial3D_vw08i")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ysqge"]
+points = PackedVector3Array(0.05, 0.05, 0.05, 0.05, 0.05, -0.05, -0.05, 0.05, 0.05, 0.05, -0.05, 0.05, 0.05, -0.05, -0.05, -0.05, 0.05, -0.05, -0.05, -0.05, 0.05, -0.05, -0.05, -0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ysqge"]
+albedo_color = Color(0.297908, 0.554353, 0.299028, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8bux2"]
+material = SubResource("StandardMaterial3D_ysqge")
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vw08i"]
+points = PackedVector3Array(-5, -0.05, -5, -5, 0.05, -5, 5, -0.05, -5, -5, -0.05, 5, -5, 0.05, 5, 5, 0.05, -5, 5, -0.05, 5, 5, 0.05, 5)
 
 [node name="Main" type="Node3D"]
+
+[node name="StartXR" parent="." instance=ExtResource("1_yblnd")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8bux2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.53628, 0.124454, 0.834814, 0.68, 0.649625, 0.339982, -0.500003, 0.749999, -0.43301, 3.46618, 3.25623, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_s58fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0114498, 0.750903, 2.27359)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_ysqge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_8bux2")
+
+[node name="PickableObject" parent="." instance=ExtResource("3_ysqge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23798, 0.0624802)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PickableObject"]
+mesh = SubResource("BoxMesh_tnehs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject"]
+shape = SubResource("ConvexPolygonShape3D_ysqge")
+
+[node name="PickableObject2" parent="." instance=ExtResource("3_ysqge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254816, 4.23903, 0.0624802)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PickableObject2"]
+mesh = SubResource("BoxMesh_tnehs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject2"]
+shape = SubResource("ConvexPolygonShape3D_ysqge")
+
+[node name="PickableObject3" parent="." instance=ExtResource("3_ysqge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.207368, 3.17793, 0.0624802)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PickableObject3"]
+mesh = SubResource("BoxMesh_tnehs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject3"]
+shape = SubResource("ConvexPolygonShape3D_ysqge")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_8bux2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("ConvexPolygonShape3D_vw08i")

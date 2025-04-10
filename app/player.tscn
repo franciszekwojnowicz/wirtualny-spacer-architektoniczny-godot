@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2xbabe601ih4"]
+
+[ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_2lr2u"]
+[ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_66u1r"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_teu8m"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_rpg30"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="4_teu8m"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_5f3q4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_teu8m"]
+radius = 0.1
+height = 1.0
+
+[node name="Player" type="XROrigin3D"]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="."]
+
+[node name="LeftHandController" type="XRController3D" parent="."]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="LeftHandController" instance=ExtResource("1_2lr2u")]
+
+[node name="FunctionPickup" parent="LeftHandController/LeftHand" instance=ExtResource("2_teu8m")]
+
+[node name="MovementTurn" parent="LeftHandController" instance=ExtResource("5_5f3q4")]
+turn_mode = 2
+
+[node name="RightHandController" type="XRController3D" parent="."]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="RightHandController" instance=ExtResource("2_66u1r")]
+
+[node name="FunctionPickup" parent="RightHandController/RightHand" instance=ExtResource("2_teu8m")]
+
+[node name="MovementDirect" parent="RightHandController" instance=ExtResource("3_rpg30")]
+
+[node name="PlayerBody" parent="." instance=ExtResource("4_teu8m")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerBody"]
+shape = SubResource("CapsuleShape3D_teu8m")
