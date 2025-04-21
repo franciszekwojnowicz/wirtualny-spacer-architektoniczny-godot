@@ -57,7 +57,7 @@ transform = Transform3D(-0.53628, 0.124454, 0.834814, 0.68, 0.649625, 0.339982, 
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_s58fy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0114498, 0.750903, 2.27359)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0114498, 2.55667, 2.27359)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
