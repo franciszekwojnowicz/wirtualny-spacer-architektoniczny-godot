@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cvaavg5ca7856"]
+[gd_scene load_steps=15 format=3 uid="uid://cvaavg5ca7856"]
 
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_yblnd"]
 [ext_resource type="PackedScene" uid="uid://d2xbabe601ih4" path="res://app/player.tscn" id="2_s58fy"]
@@ -33,6 +33,12 @@ size = Vector3(50, 0.1, 50)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vw08i"]
 points = PackedVector3Array(-25, -0.05, -25, -25, 0.05, -25, 25, -0.05, -25, -25, -0.05, 25, -25, 0.05, 25, 25, 0.05, -25, 25, -0.05, 25, 25, 0.05, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vw08i"]
+size = Vector3(1, 4, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tnehs"]
+points = PackedVector3Array(-0.5, -2, -0.5, -0.5, -2, 0.5, -0.5, 2, -0.5, 0.5, -2, -0.5, 0.5, -2, 0.5, -0.5, 2, 0.5, 0.5, 2, -0.5, 0.5, 2, 0.5)
 
 [node name="Main" type="Node3D"]
 
@@ -83,3 +89,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0644532, 3, 0)
 
 [node name="GlassHouse" parent="." instance=ExtResource("4_8bux2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -22.2001)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07978, 0, 0)
+mesh = SubResource("BoxMesh_vw08i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07978, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tnehs")
