@@ -1,0 +1,85 @@
+{
+    "name": "Klippad Sunrise 2",
+    "id": "klippad_sunrise_2",
+    "scraper": "PolyHavenHdriScraper",
+    "fetchUrl": "https://polyhaven.com/a/klippad_sunrise_2",
+    "thumbnail": "thumb.png",
+    "variants": [
+        "1k (exr)",
+        "2k (exr)",
+        "4k (exr)",
+        "8k (exr)",
+        "16k (exr)",
+        "24k (exr)",
+        "1k (hdr)",
+        "2k (hdr)",
+        "4k (hdr)",
+        "8k (hdr)",
+        "16k (hdr)",
+        "24k (hdr)"
+    ],
+    "custom": {
+        "variant_data": [
+            [
+                "1k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/1k/klippad_sunrise_2_1k.exr"
+            ],
+            [
+                "2k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/2k/klippad_sunrise_2_2k.exr"
+            ],
+            [
+                "4k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/klippad_sunrise_2_4k.exr"
+            ],
+            [
+                "8k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/8k/klippad_sunrise_2_8k.exr"
+            ],
+            [
+                "16k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/16k%2B/klippad_sunrise_2_16k.exr"
+            ],
+            [
+                "24k",
+                "exr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/16k%2B/klippad_sunrise_2_24k.exr"
+            ],
+            [
+                "1k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/klippad_sunrise_2_1k.hdr"
+            ],
+            [
+                "2k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/klippad_sunrise_2_2k.hdr"
+            ],
+            [
+                "4k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/4k/klippad_sunrise_2_4k.hdr"
+            ],
+            [
+                "8k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/klippad_sunrise_2_8k.hdr"
+            ],
+            [
+                "16k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/16k%2B/klippad_sunrise_2_16k.hdr"
+            ],
+            [
+                "24k",
+                "hdr",
+                "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/16k%2B/klippad_sunrise_2_24k.hdr"
+            ]
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2xbabe601ih4"]
+[gd_scene load_steps=10 format=3 uid="uid://d2xbabe601ih4"]
 
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_2lr2u"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_66u1r"]
@@ -6,6 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_rpg30"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="4_teu8m"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="5_5f3q4"]
+[ext_resource type="PackedScene" uid="uid://c2q5phg8w08o" path="res://addons/godot-xr-tools/functions/movement_jump.tscn" id="6_jdsor"]
+[ext_resource type="Script" uid="uid://r0y30rxpd5v0" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="8_xnx3n"]
+
+[sub_resource type="Resource" id="Resource_wx5x8"]
+script = ExtResource("8_xnx3n")
+flags = 0
+move_drag = 5.0
+move_traction = 30.0
+stop_on_slope = true
+move_max_slope = 45.0
+jump_max_slope = 45.0
+jump_velocity = 5.0
+bounciness = 0.0
+bounce_threshold = 1.0
+metadata/_custom_type_script = "uid://r0y30rxpd5v0"
 
 [node name="Player" type="XROrigin3D"]
 
@@ -20,6 +35,7 @@ tracker = &"left_hand"
 grab_distance = 0.1
 
 [node name="MovementDirect" parent="LeftHandController" instance=ExtResource("3_rpg30")]
+strafe = true
 
 [node name="RightHandController" type="XRController3D" parent="."]
 tracker = &"right_hand"
@@ -32,5 +48,10 @@ grab_distance = 0.1
 [node name="MovementTurn" parent="RightHandController" instance=ExtResource("5_5f3q4")]
 turn_mode = 2
 
+[node name="MovementJump" parent="RightHandController" instance=ExtResource("6_jdsor")]
+jump_button_action = "ax_button"
+
 [node name="PlayerBody" parent="." instance=ExtResource("4_teu8m")]
 player_calibrate_height = false
+physics = SubResource("Resource_wx5x8")
+ground_control = 2
