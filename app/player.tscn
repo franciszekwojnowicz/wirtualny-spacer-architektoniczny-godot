@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2xbabe601ih4"]
+[gd_scene load_steps=11 format=3 uid="uid://d2xbabe601ih4"]
 
 [ext_resource type="PackedScene" uid="uid://bq86r4yll8po" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_fullglove_low.tscn" id="1_2lr2u"]
+[ext_resource type="Script" uid="uid://bjuibutvstcn3" path="res://app/left_hand_controller.gd" id="1_wx5x8"]
 [ext_resource type="PackedScene" uid="uid://xqimcf20s2jp" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_fullglove_low.tscn" id="2_66u1r"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="2_teu8m"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="3_rpg30"]
@@ -28,6 +29,7 @@ metadata/_custom_type_script = "uid://r0y30rxpd5v0"
 
 [node name="LeftHandController" type="XRController3D" parent="."]
 tracker = &"left_hand"
+script = ExtResource("1_wx5x8")
 
 [node name="LeftHand" parent="LeftHandController" instance=ExtResource("1_2lr2u")]
 
