@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://da7wmkmg26kmt"]
+
+[ext_resource type="PackedScene" uid="uid://b0wh5idicm7rd" path="res://models/house-2/house-2.glb" id="1_7y86l"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tkvl8"]
+points = PackedVector3Array(9.9973, 0, 0, 9.9973, -0.3, 0, -0.000479742, 0, 0, 9.99632, 0, 13.6237, 9.99632, -0.3, 13.6237, -0.000479742, -0.3, 0, -0.000479742, 0, 13.625, -0.000479742, -0.3, 13.625)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ksfhm"]
+points = PackedVector3Array(-2, 0, -4, -2, 1.8, -4, 2, 0, -4, -2, 0, 0, -2, 1.8, -3.60023, 2, 1.8, -4, 2, 0, 0, -2, 0.179894, 0, 2, 1.8, -3.60023, 2, 0.179894, 0)
+
+[node name="house_2_3" type="Node3D"]
+
+[node name="house-2" parent="." instance=ExtResource("1_7y86l")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="house-2"]
+
+[node name="CollisionFloor" type="CollisionShape3D" parent="house-2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99721, 0, -0.000120163)
+shape = SubResource("ConvexPolygonShape3D_tkvl8")
+
+[node name="CollisionStair" type="CollisionShape3D" parent="house-2/StaticBody3D"]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -0.988413, -1.8, -3.99998)
+shape = SubResource("ConvexPolygonShape3D_ksfhm")
+
+[editable path="house-2"]

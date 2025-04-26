@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://cvaavg5ca7856"]
+[gd_scene load_steps=24 format=3 uid="uid://cvaavg5ca7856"]
 
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_yblnd"]
 [ext_resource type="PackedScene" uid="uid://d2xbabe601ih4" path="res://app/player.tscn" id="2_s58fy"]
 [ext_resource type="PackedScene" uid="uid://dtj3nm0s1lbrt" path="res://app/buildings/house_2_2.tscn" id="3_tnehs"]
 [ext_resource type="PackedScene" uid="uid://dmc2o1mqscuda" path="res://app/items/demo_cube.tscn" id="3_ysqge"]
 [ext_resource type="PackedScene" uid="uid://bj1fijrbvm5po" path="res://app/buildings/glass_house.tscn" id="4_8bux2"]
+[ext_resource type="PackedScene" uid="uid://da7wmkmg26kmt" path="res://app/buildings/house_2_3.tscn" id="5_tppe5"]
 [ext_resource type="PackedScene" uid="uid://dbns706l5u5gy" path="res://app/buildings/house_2.tscn" id="6_tppe5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s58fy"]
@@ -91,6 +92,15 @@ mesh = SubResource("BoxMesh_ysqge")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_8bux2")
 
+[node name="House2" parent="." instance=ExtResource("6_tppe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -1, 23.3521)
+
+[node name="House2-2" parent="." instance=ExtResource("3_tnehs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08942, 1.48348, 15.0373)
+
+[node name="house_2_3" parent="." instance=ExtResource("5_tppe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2, 23)
+
 [node name="Floor" type="StaticBody3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
@@ -98,9 +108,6 @@ mesh = SubResource("BoxMesh_8bux2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("ConvexPolygonShape3D_vw08i")
-
-[node name="House2-2" parent="Floor" instance=ExtResource("3_tnehs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.91058, 1.48348, 15.0373)
 
 [node name="Cubes" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.45677)
@@ -132,9 +139,6 @@ mesh = SubResource("BoxMesh_vw08i")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07978, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_tnehs")
-
-[node name="House2" parent="." instance=ExtResource("6_tppe5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 23.3521)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90764, 1.56178, 0)

@@ -2,7 +2,7 @@ extends XRController3D
 
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# button function
 	if get_is_active() and is_button_pressed("ax_button"):
 		get_parent().global_position = Vector3(0,5,0)
