@@ -13,7 +13,7 @@ config_version=5
 config/name="wirtualny-spacer-architektoniczny-godot"
 run/main_scene="uid://cvaavg5ca7856"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://bwq2wj31p3ysg"
 
 [autoload]
 
