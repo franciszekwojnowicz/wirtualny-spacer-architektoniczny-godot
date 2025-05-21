@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbkginwyrw4t4"]
+
+[ext_resource type="PackedScene" uid="uid://dn501smdp1gd" path="res://models/trees/Tree_test.glb" id="1_36kqk"]
+
+[node name="Tree_1" type="Node3D"]
+
+[node name="Tree_test" parent="." instance=ExtResource("1_36kqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430992, 0, 10.7976)
+
+[editable path="Tree_test"]
