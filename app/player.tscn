@@ -39,6 +39,8 @@ grab_distance = 0.1
 [node name="MovementDirect" parent="LeftHandController" instance=ExtResource("3_rpg30")]
 strafe = true
 
+[node name="TimerTeleport" type="Timer" parent="LeftHandController"]
+
 [node name="RightHandController" type="XRController3D" parent="."]
 tracker = &"right_hand"
 
@@ -57,3 +59,5 @@ jump_button_action = "ax_button"
 player_calibrate_height = false
 physics = SubResource("Resource_wx5x8")
 ground_control = 2
+
+[connection signal="timeout" from="LeftHandController/TimerTeleport" to="LeftHandController" method="_on_timer_teleport_timeout"]
