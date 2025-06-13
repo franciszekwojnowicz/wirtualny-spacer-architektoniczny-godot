@@ -58,7 +58,7 @@ albedo_color = Color(0.302659, 0.508147, 0.216515, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_tppe5"]
 material = SubResource("StandardMaterial3D_tnehs")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tppe5"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6weni"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6weni"]
@@ -113,7 +113,7 @@ points = PackedVector3Array(50, 3, 0.5, 50, 3, -0.5, -50, 3, 0.5, 50, -3, 0.5, 5
 environment = SubResource("Environment_8bux2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.643675, 0.084536, 0.760616, 0.744574, 0.298909, 0.596878, -0.176898, 0.95053, -0.255344, 14.6799, 8.9273, -20.4269)
+transform = Transform3D(-0.609977, 0.221319, 0.760885, 0.791807, 0.132503, 0.596225, 0.0311365, 0.966158, -0.256066, 27.5012, 9.41441, -20.4196)
 light_energy = 0.516
 shadow_enabled = true
 
@@ -171,8 +171,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0716553, 0.208008, 0.494575
 mesh = SubResource("BoxMesh_tppe5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.208008, 0)
-shape = SubResource("ConvexPolygonShape3D_tppe5")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0716553, 0.208008, 0.494575)
+shape = SubResource("ConvexPolygonShape3D_6weni")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
 
