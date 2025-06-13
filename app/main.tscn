@@ -136,10 +136,12 @@ size = Vector3(100, 100, 100)
 environment = SubResource("Environment_8bux2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.609977, 0.221319, 0.760885, 0.791807, 0.132503, 0.596225, 0.0311365, 0.966158, -0.256066, 27.5012, 9.41441, -20.4196)
-light_energy = 0.516
+transform = Transform3D(0.0328064, 0.186478, -0.981911, -0.414288, 0.896601, 0.156434, 0.909554, 0.401662, 0.10667, 27.5012, 9.41441, -20.4196)
+light_energy = 0.3
 shadow_enabled = true
 script = ExtResource("2_i37im")
+
+[node name="ChangePositionTimer" type="Timer" parent="DirectionalLight3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_s58fy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -324,3 +326,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.237, 0, -66.7487)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BabelTower2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.5318, -0.901299, -47.2952)
 mesh = SubResource("BoxMesh_kqegv")
+
+[connection signal="timeout" from="DirectionalLight3D/ChangePositionTimer" to="DirectionalLight3D" method="_on_change_position_timer_timeout"]
