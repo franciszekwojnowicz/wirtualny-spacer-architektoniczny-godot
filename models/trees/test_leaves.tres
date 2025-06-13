@@ -3,5 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dxie0bvsppitq" path="res://models/trees/Leaves0120_35_S.png" id="1_2seak"]
 
 [resource]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_2seak")

@@ -1,10 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbkginwyrw4t4"]
+[gd_scene load_steps=3 format=3 uid="uid://cbkginwyrw4t4"]
 
 [ext_resource type="PackedScene" uid="uid://dn501smdp1gd" path="res://models/trees/Tree_test.glb" id="1_36kqk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_36kqk"]
+height = 6.0
+radius = 0.25
 
 [node name="Tree_1" type="Node3D"]
 
 [node name="Tree_test" parent="." instance=ExtResource("1_36kqk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430992, 0, 10.7976)
+
+[node name="leaves" parent="Tree_test/tree" index="0"]
+lod_bias = 11.322
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430992, 0, 10.7976)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0485878, 1.1472, -10.6731)
+shape = SubResource("CylinderShape3D_36kqk")
 
 [editable path="Tree_test"]
