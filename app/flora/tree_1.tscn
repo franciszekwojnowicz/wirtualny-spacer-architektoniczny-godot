@@ -12,7 +12,7 @@ radius = 0.25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430992, 0, 10.7976)
 
 [node name="leaves" parent="Tree_test/tree" index="0"]
-lod_bias = 11.322
+lod_bias = 31.452
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.430992, 0, 10.7976)
