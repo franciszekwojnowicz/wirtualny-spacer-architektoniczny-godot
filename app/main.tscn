@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cvaavg5ca7856"]
+[gd_scene load_steps=49 format=3 uid="uid://cvaavg5ca7856"]
 
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_yblnd"]
 [ext_resource type="Script" uid="uid://ca2e68jxp8gpy" path="res://app/directional_light_3d.gd" id="2_i37im"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://di3trebxi8eoo" path="res://assets/textures/_Brick_Antique_01_1.jpg" id="9_d28lo"]
 [ext_resource type="PackedScene" uid="uid://cbkginwyrw4t4" path="res://app/flora/tree_1.tscn" id="9_i37im"]
 [ext_resource type="AudioStream" uid="uid://d2yv7f80a0guf" path="res://assets/audio/nature-ambience.mp3" id="11_kqegv"]
+[ext_resource type="PackedScene" uid="uid://bxja3gmwceht3" path="res://app/items/jump_cube.tscn" id="12_6weni"]
 [ext_resource type="Texture2D" uid="uid://dhk7vsbijnxla" path="res://models/glass_house_textured/glass_house_textured_Translucent_Glass_Safety.jpg" id="12_uvnh6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_s58fy"]
@@ -134,6 +135,30 @@ points = PackedVector3Array(50, 4, 0.5, 50, 4, -0.5, -50, 4, 0.5, 50, -4, 0.5, 5
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_di1jt"]
 points = PackedVector3Array(50, 4, 0.5, 50, 4, -0.5, -50, 4, 0.5, 50, -4, 0.5, 50, -4, -0.5, -50, 4, -0.5, -50, -4, 0.5, -50, -4, -0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2jj4"]
+albedo_texture = ExtResource("5_o47ap")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_nj2lw"]
+material = SubResource("StandardMaterial3D_k2jj4")
+size = Vector3(25, 0.5, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qpuqg"]
+points = PackedVector3Array(-12.5, -0.25, -1, -12.5, 0.25, -1, 12.5, -0.25, -1, -12.5, -0.25, 1, -12.5, 0.25, 1, 12.5, 0.25, -1, 12.5, -0.25, 1, 12.5, 0.25, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfrbt"]
+albedo_texture = ExtResource("5_o47ap")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_8th36"]
+material = SubResource("StandardMaterial3D_lfrbt")
+size = Vector3(2, 0.5, 54)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i2r8w"]
+points = PackedVector3Array(1, 0.25, 27, 1, -0.25, 27, 1, 0.25, -27, -1, 0.25, 27, -1, -0.25, 27, 1, -0.25, -27, -1, 0.25, -27, -1, -0.25, -27)
+
 [node name="Main" type="Node3D"]
 
 [node name="StartXR" parent="." instance=ExtResource("1_yblnd")]
@@ -156,6 +181,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="glass_house_textured" parent="Houses" instance=ExtResource("4_tppe5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6844, 0.0978508, -22.908)
+
+[node name="glass_house_textured_2" parent="Houses" instance=ExtResource("4_tppe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.7158, 35.1951, -105.165)
 
 [node name="DynamicElements" type="Node3D" parent="."]
 
@@ -204,7 +232,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0644532, 3, 0)
 [node name="StaticElements" type="Node3D" parent="."]
 
 [node name="BabelTower" type="StaticBody3D" parent="StaticElements"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.2058, 0, -35.3238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.2058, 15.9866, -35.3238)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticElements/BabelTower"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.5318, -0.901299, -47.2952)
@@ -215,7 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.5318, -0.901299, -47.2952
 shape = SubResource("ConvexPolygonShape3D_k2jj4")
 
 [node name="BabelTower2" type="StaticBody3D" parent="StaticElements"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.237, 0, -66.7487)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.237, -13.9921, -66.7487)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticElements/BabelTower2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.5318, -0.901299, -47.2952)
@@ -292,6 +320,12 @@ transform = Transform3D(0.418612, 0, 0.908165, 0, 1, 0, -0.908165, 0, 0.418612, 
 [node name="Tree_2" parent="StaticElements/Trees" instance=ExtResource("9_i37im")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.22156, 0, -42.5251)
 
+[node name="Tree_19" parent="StaticElements/Trees" instance=ExtResource("9_i37im")]
+transform = Transform3D(0.891007, 0, -0.453991, 0, 1, 0, 0.453991, 0, 0.891007, -16.6285, -2.69942, -40.6711)
+
+[node name="Tree_18" parent="StaticElements/Trees" instance=ExtResource("9_i37im")]
+transform = Transform3D(0.656059, 0, 0.75471, 0, 1, 0, -0.75471, 0, 0.656059, -2.66558, 0, -48.8894)
+
 [node name="Tree_3" parent="StaticElements/Trees" instance=ExtResource("9_i37im")]
 transform = Transform3D(0.795304, 0, -0.606211, 0, 1, 0, 0.606211, 0, 0.795304, 5.71144, -1.16638, -42.1553)
 
@@ -344,5 +378,77 @@ attenuation_model = 3
 autoplay = true
 max_distance = 100.0
 bus = &"Enviroment"
+
+[node name="Chellange" type="Node3D" parent="."]
+
+[node name="Cubes" type="Node3D" parent="Chellange"]
+
+[node name="JumpCube" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0175, 0.296826, -42.4559)
+
+[node name="JumpCube4" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6786, -0.207142, -42.7592)
+
+[node name="JumpCube3" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0263, 2.18851, -44.7531)
+
+[node name="JumpCube2" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6004, 1.14404, -43.9769)
+
+[node name="JumpCube5" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.8037, 0.583861, -43.9769)
+
+[node name="JumpCube6" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.19, 2.18851, -49.9464)
+
+[node name="JumpCube7" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2998, 2.92269, -50.2852)
+
+[node name="JumpCube8" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.016, 3.57445, -51.7892)
+
+[node name="JumpCube9" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8346, 4.41069, -53.4401)
+
+[node name="JumpCube10" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.445, 5.49015, -54.5279)
+
+[node name="JumpCube11" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7368, 6.49475, -55.3239)
+
+[node name="JumpCube12" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.491, 7.0004, -56.7527)
+
+[node name="JumpCube13" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.8634, 7.64202, -58.5172)
+
+[node name="JumpCube14" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2212, 7.50366, -61.7352)
+
+[node name="JumpCube15" parent="Chellange/Cubes" instance=ExtResource("12_6weni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.4404, 15.0141, -62.4047)
+
+[node name="Ramps" type="Node3D" parent="Chellange"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Chellange/Ramps"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chellange/Ramps/StaticBody3D"]
+transform = Transform3D(0.961262, -0.275637, 0, 0.275637, 0.961262, 0, 0, 0, 1, 64.4543, 11.6266, -62.8362)
+mesh = SubResource("BoxMesh_nj2lw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chellange/Ramps/StaticBody3D"]
+transform = Transform3D(0.961262, -0.275637, 0, 0.275637, 0.961262, 0, 0, 0, 1, 64.4543, 11.6266, -62.8362)
+shape = SubResource("ConvexPolygonShape3D_qpuqg")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Chellange/Ramps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.4286, 13.1453, -64.4208)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chellange/Ramps/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 0.940288, -0.34038, 0, 0.34038, 0.940288, -8.34732, 12.0638, -24.6994)
+mesh = SubResource("BoxMesh_8th36")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Chellange/Ramps/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 0.940288, -0.34038, 0, 0.34038, 0.940288, -8.34732, 12.0638, -24.6994)
+shape = SubResource("ConvexPolygonShape3D_i2r8w")
 
 [connection signal="timeout" from="DirectionalLight3D/ChangePositionTimer" to="DirectionalLight3D" method="_on_change_position_timer_timeout"]
