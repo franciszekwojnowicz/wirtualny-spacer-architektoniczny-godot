@@ -1,0 +1,169 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Translucent_Glass_Safety
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.921569 0.956863
+Ks 0.330000 0.330000 0.330000
+d 0.070000
+map_Kd The Glass House HabitatNow/Translucent_Glass_Safety.jpg
+
+newmtl Color_M08
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+
+newmtl Wood_Cherry_Original
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Wood_Cherry_Original.jpg
+
+newmtl _Brick_Antique_01_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.576471 0.411765 0.278431
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/_Brick_Antique_01_1.jpg
+
+newmtl Square_Glass_Tile_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.494118 0.588235 0.345098
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Square_Glass_Tile_01.jpg
+
+newmtl Color_M00
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Brick_Antique_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.415686 0.250980
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Brick_Antique_01.jpg
+
+newmtl Color_M02
+Ka 0.000000 0.000000 0.000000
+Kd 0.776471 0.776471 0.776471
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Ivory_
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 0.941176
+Ks 0.330000 0.330000 0.330000
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Groundcover_Gravel_1_inch
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.521569 0.431373
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Groundcover_Gravel_1_inch.jpg
+
+newmtl _Wood_Bamboo_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.694118 0.411765 0.168627
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/_Wood_Bamboo_1.jpg
+
+newmtl Stainless_Steel_Appliance
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Stainless_Steel_Appliance.jpg
+
+newmtl Color_M04
+Ka 0.000000 0.000000 0.000000
+Kd 0.556863 0.556863 0.556863
+Ks 0.330000 0.330000 0.330000
+
+newmtl Mirror_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.725490 0.725490 0.725490
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Mirror_01.jpg
+
+newmtl Aluminum_Brushed_5cm
+Ka 0.000000 0.000000 0.000000
+Kd 0.498039 0.498039 0.498039
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Aluminum_Brushed_5cm.jpg
+
+newmtl _1
+Ka 0.000000 0.000000 0.000000
+Kd 0.423529 0.337255 0.152941
+Ks 0.330000 0.330000 0.330000
+
+newmtl Wood_Veneer_01
+Ka 0.000000 0.000000 0.000000
+Kd 0.470588 0.274510 0.145098
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Wood_Veneer_01.jpg
+
+newmtl _Wood_Cherry_Original_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/_Wood_Cherry_Original_1.jpg
+
+newmtl Metal_Aluminum_Anodized
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Metal_Aluminum_Anodized.jpg
+
+newmtl Charcoal_Appliance
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.137255 0.137255
+Ks 0.330000 0.330000 0.330000
+
+newmtl Metal_Rusted
+Ka 0.000000 0.000000 0.000000
+Kd 0.776471 0.407843 0.278431
+Ks 0.330000 0.330000 0.330000
+
+newmtl Carpet_Berber_Pattern_Gray
+Ka 0.000000 0.000000 0.000000
+Kd 0.647059 0.647059 0.647059
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Carpet_Berber_Pattern_Gray.jpg
+
+newmtl piel_sillon
+Ka 0.000000 0.000000 0.000000
+Kd 0.643137 0.301961 0.098039
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/piel_sillon.jpg
+
+newmtl piel
+Ka 0.000000 0.000000 0.000000
+Kd 0.643137 0.305882 0.082353
+Ks 0.330000 0.330000 0.330000
+d 0.500000
+map_Kd The Glass House HabitatNow/piel.jpg
+
+newmtl Wood_Bamboo
+Ka 0.000000 0.000000 0.000000
+Kd 0.694118 0.411765 0.168627
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Wood_Bamboo.jpg
+
+newmtl _LightGray_
+Ka 0.000000 0.000000 0.000000
+Kd 0.662745 0.662745 0.662745
+Ks 0.330000 0.330000 0.330000
+
+newmtl Color_001
+Ka 0.000000 0.000000 0.000000
+Kd 0.886275 0.886275 0.886275
+Ks 0.330000 0.330000 0.330000
+
+newmtl Suede_Blue
+Ka 0.000000 0.000000 0.000000
+Kd 0.945098 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd The Glass House HabitatNow/Suede_Blue.jpg
+
